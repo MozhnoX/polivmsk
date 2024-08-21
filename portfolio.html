@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Poliv Msk - Портфолио
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+	<div class="modal backcall-modal" style="display: none;" id="backcall-modal">
+		<div class="backcall-modal-wrp">
+			<p class="backcall-modal-h">Заказать звонок</p>
+			<p>
+				Оставьте свои контакнты данные, наш специалист перезвонит вам
+			</p>
+			<form class="backcall-modal-form consult-form">
+				<input type="text" class="input" name="Имя" placeholder="Ваше имя">
+				<input type="tel" class="input user_phone" name="Телефон" placeholder="Ваш телефон">
+				<label class="form-checkbox">
+					<input type="checkbox" value="Да" name="Даю согласие на обработку персональных данных и принимаю политику конфидициальности" checked>
+					<span>Даю согласие на обработку персональных данных и принимаю политику конфидициальности</span>
+				</label>
+				<input type="submit" class="black-button" value="Отправить">
+			</form>
+		</div>
+	</div>
+
+	<div class="modal backcall-modal" style="display: none;" id="backcall-thanks-modal">
+		<div class="backcall-modal-thanks backcall-modal-wrp">
+			<div>
+				<p class="backcall-modal-h">СПАСИБО!</p>
+				<p>
+					Спасибо! Ваша заявка отправлена.
+					Ожидайте звонка в ближайшее время.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<header id="header">
+		<div class="wrp">
+			<a href="/" class="header-logo">
+				<img src="img/logo.svg" alt="logo">
+			</a>
+			<p class="header-logo-text">
+				Профессиональные<br>
+				системы автоматического<br>
+				полива
+			</p>
+			<input id="header-menu__toggle" type="radio" style="display: none;" />
+			<label class="header-menu__btn" for="header-menu__toggle">
+				<div>
+					<span></span>
+				</div>
+			</label>
+			<ul class="header-menu">
+				<li class="sub-li">
+					<a href="#">О компании</a>
+					<ul>
+						<li>
+							<a href="#">Вакансии</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Услуги</a>
+				</li>
+				<li>
+					<a href="#">Портфолио</a>
+				</li>
+				<li>
+					<a href="#">Прайс-лист</a>
+				</li>
+				<li>
+					<a href="#">Акции</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+			<div class="header-right">
+				<a href="tel:8 (999) 990 - 90 -90" class="header-right-phone">8 (999) 990 - 90 -90</a>
+				<a data-options='{"touch" : false}' data-fancybox data-src="#backcall-modal" href="javascript:;" class="header-right-backcall">заявка на обратный звонок</a>
+			</div>
+		</div>
+	</header>
+
+	<section id="breadcrumbs">
+		<div class="wrp">
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<span>Портфолио</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="portfolio">
+		<div class="wrp">
+			<h1 class="header-sec">портфолио</h1>
+		</div>
+		<div class="portfolio-map">
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af18d1d16d55e68587b0ca791cb9d9a9e8ebbec52cea6edf0212999fbc5ce8673&amp;source=constructor" width="100%" height="512" frameborder="0"></iframe>
+			<!-- MARKER -->
+			<!-- <img src="img/porfolio-map-marker.svg" alt="map-marker"> -->
+			<div class="portfolio-map-item">
+				<img src="img/project-img1.png" alt="project">
+				<div class="info">
+					<p class="info-name">Название проекта</p>
+					<p>
+						Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="wrp">
+			<div class="portfolio-list">
+				<div class="projects-slider-item">
+					<div class="img">
+						<img src="img/project-img1.png" alt="project">
+						<a href="#">подробнее<span></span></a>
+					</div>
+					<div class="info">
+						<p class="info-name">
+							Название<br> проекта
+						</p>
+						<p class="info-text">
+							Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+						</p>
+						<div class="info-items">
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/size-icon.svg" alt="size">
+								</span>
+								<p>Площадь: <span>20 соток</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/date-icon.svg" alt="date">
+								</span>
+								<p>Срок: <span>14 рабочих дней</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/price-icon.svg" alt="price">
+								</span>
+								<p>Стоимость: <span>60 000 руб</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="projects-slider-item">
+					<div class="img">
+						<img src="img/project-img2.png" alt="project">
+						<a href="#">подробнее<span></span></a>
+					</div>
+					<div class="info">
+						<p class="info-name">
+							Название<br> проекта
+						</p>
+						<p class="info-text">
+							Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+						</p>
+						<div class="info-items">
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/size-icon.svg" alt="size">
+								</span>
+								<p>Площадь: <span>20 соток</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/date-icon.svg" alt="date">
+								</span>
+								<p>Срок: <span>14 рабочих дней</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/price-icon.svg" alt="price">
+								</span>
+								<p>Стоимость: <span>60 000 руб</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="projects-slider-item">
+					<div class="img">
+						<img src="img/project-img1.png" alt="project">
+						<a href="#">подробнее<span></span></a>
+					</div>
+					<div class="info">
+						<p class="info-name">
+							Название<br> проекта
+						</p>
+						<p class="info-text">
+							Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+						</p>
+						<div class="info-items">
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/size-icon.svg" alt="size">
+								</span>
+								<p>Площадь: <span>20 соток</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/date-icon.svg" alt="date">
+								</span>
+								<p>Срок: <span>14 рабочих дней</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/price-icon.svg" alt="price">
+								</span>
+								<p>Стоимость: <span>60 000 руб</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="projects-slider-item">
+					<div class="img">
+						<img src="img/project-img2.png" alt="project">
+						<a href="#">подробнее<span></span></a>
+					</div>
+					<div class="info">
+						<p class="info-name">
+							Название<br> проекта
+						</p>
+						<p class="info-text">
+							Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+						</p>
+						<div class="info-items">
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/size-icon.svg" alt="size">
+								</span>
+								<p>Площадь: <span>20 соток</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/date-icon.svg" alt="date">
+								</span>
+								<p>Срок: <span>14 рабочих дней</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/price-icon.svg" alt="price">
+								</span>
+								<p>Стоимость: <span>60 000 руб</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="projects-slider-item">
+					<div class="img">
+						<img src="img/project-img1.png" alt="project">
+						<a href="#">подробнее<span></span></a>
+					</div>
+					<div class="info">
+						<p class="info-name">
+							Название<br> проекта
+						</p>
+						<p class="info-text">
+							Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+						</p>
+						<div class="info-items">
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/size-icon.svg" alt="size">
+								</span>
+								<p>Площадь: <span>20 соток</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/date-icon.svg" alt="date">
+								</span>
+								<p>Срок: <span>14 рабочих дней</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/price-icon.svg" alt="price">
+								</span>
+								<p>Стоимость: <span>60 000 руб</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="projects-slider-item">
+					<div class="img">
+						<img src="img/project-img2.png" alt="project">
+						<a href="#">подробнее<span></span></a>
+					</div>
+					<div class="info">
+						<p class="info-name">
+							Название<br> проекта
+						</p>
+						<p class="info-text">
+							Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+						</p>
+						<div class="info-items">
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/size-icon.svg" alt="size">
+								</span>
+								<p>Площадь: <span>20 соток</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/date-icon.svg" alt="date">
+								</span>
+								<p>Срок: <span>14 рабочих дней</span></p>
+							</div>
+							<div class="info-item">
+								<span class="info-item-icon">
+									<img src="img/price-icon.svg" alt="price">
+								</span>
+								<p>Стоимость: <span>60 000 руб</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer">
+		<div class="wrp">
+			<div class="footer-top">
+				<a href="/" class="footer-logo">
+					<img src="img/logo.svg" alt="logo">
+					<span>Профессиональные системы<br> автоматического полива</span>
+				</a>
+				<ul class="footer-menu">
+					<li>
+						<a href="#">О компании</a>
+						<ul>
+							<li>
+								<a href="#">Вакансии</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Услуги</a>
+					</li>
+					<li>
+						<a href="#">Портфолио</a>
+					</li>
+					<li>
+						<a href="#">Прайс-лист</a>
+					</li>
+					<li>
+						<a href="#">Акции</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="footer-top-right">
+					<a href="tel:8 (999) 990 - 90 -90" class="footer-phone">8 (999) 990 - 90 -90</a>
+					<a data-options='{"touch" : false}' data-fancybox data-src="#backcall-modal" href="javascript:;" class="black-button">заявка на звонок</a>
+				</div>
+			</div>
+			<div class="footer-center">
+				<p class="footer-copyright">
+					Все права защищены,<br>
+					2024 ©
+				</p>
+				<div class="footer-center-item">
+					<p>Адрес</p>
+					<p>
+						г. Москва, ул. Очень длинная,<br>
+						д. 20, к. 1
+					</p>
+				</div>
+				<div class="footer-center-item">
+					<p>График работы</p>
+					<p>
+						с 10 до 21, без выходных
+					</p>
+				</div>
+				<div class="footer-center-item">
+					<p>E-mail</p>
+					<a href="mailto:auto-poliv@info.ru">auto-poliv@info.ru</a>
+				</div>
+				<div class="footer-center-item">
+					<p>Мессенджеры:</p>
+					<div class="footer-socials">
+						<a href="#">
+							<img src="img/telegram-black-icon.svg" alt="telegram">
+						</a>
+						<a href="#">
+							<img src="img/whatsapp-black-icon.svg" alt="whatsapp">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<a href="#">Карта сайта</a>
+				<a href="#">Обработка персональных данных</a>
+				<p>Разработано в <a href="https://internet-team.ru/" target="_blank">Internet Team</a></p>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/all.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

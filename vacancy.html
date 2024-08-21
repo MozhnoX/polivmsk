@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Poliv Msk - Вакансии
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+	<div class="modal backcall-modal" style="display: none;" id="backcall-modal">
+		<div class="backcall-modal-wrp">
+			<p class="backcall-modal-h">Заказать звонок</p>
+			<p>
+				Оставьте свои контакнты данные, наш специалист перезвонит вам
+			</p>
+			<form class="backcall-modal-form consult-form">
+				<input type="text" class="input" name="Имя" placeholder="Ваше имя">
+				<input type="tel" class="input user_phone" name="Телефон" placeholder="Ваш телефон">
+				<label class="form-checkbox">
+					<input type="checkbox" value="Да" name="Даю согласие на обработку персональных данных и принимаю политику конфидициальности" checked>
+					<span>Даю согласие на обработку персональных данных и принимаю политику конфидициальности</span>
+				</label>
+				<input type="submit" class="black-button" value="Отправить">
+			</form>
+		</div>
+	</div>
+
+	<div class="modal backcall-modal" style="display: none;" id="backcall-thanks-modal">
+		<div class="backcall-modal-thanks backcall-modal-wrp">
+			<div>
+				<p class="backcall-modal-h">СПАСИБО!</p>
+				<p>
+					Спасибо! Ваша заявка отправлена.
+					Ожидайте звонка в ближайшее время.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal backcall-modal full-modal" style="display: none;" id="vacancy-modal">
+		<div class="backcall-modal-wrp">
+			<p class="backcall-modal-h">отправить резюме</p>
+			<p>
+				Оставьте свои контакнты данные
+			</p>
+			<form class="backcall-modal-form consult-form">
+				<input type="text" class="input" name="Имя" placeholder="Ваше имя">
+				<input type="tel" class="input user_phone" name="Телефон" placeholder="Ваш телефон">
+				<textarea name="Комментарий" placeholder="Комментарий" class="input"></textarea>
+				<label class="form-file">
+					<input type="file" name="Файл">
+					<span>
+						<span class="icon"></span>
+						<span class="name">Прикрепите файл с резюме</span>
+					</span>
+				</label>
+				<label class="form-checkbox">
+					<input type="checkbox" value="Да" name="Даю согласие на обработку персональных данных и принимаю политику конфидициальности" checked>
+					<span>Даю согласие на обработку персональных данных и принимаю политику конфидициальности</span>
+				</label>
+				<input type="submit" class="black-button" value="Отправить">
+			</form>
+		</div>
+	</div>
+
+	<div class="modal backcall-modal" style="display: none;" id="vacancy-thanks-modal">
+		<div class="backcall-modal-thanks backcall-modal-wrp">
+			<div>
+				<p class="backcall-modal-h">СПАСИБО!</p>
+				<p>
+					Спасибо! Ваше резюме отправлено.
+					Ожидайте звонка в ближайшее время.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<header id="header">
+		<div class="wrp">
+			<a href="/" class="header-logo">
+				<img src="img/logo.svg" alt="logo">
+			</a>
+			<p class="header-logo-text">
+				Профессиональные<br>
+				системы автоматического<br>
+				полива
+			</p>
+			<input id="header-menu__toggle" type="radio" style="display: none;" />
+			<label class="header-menu__btn" for="header-menu__toggle">
+				<div>
+					<span></span>
+				</div>
+			</label>
+			<ul class="header-menu">
+				<li class="sub-li">
+					<a href="#">О компании</a>
+					<ul>
+						<li>
+							<a href="#">Вакансии</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Услуги</a>
+				</li>
+				<li>
+					<a href="#">Портфолио</a>
+				</li>
+				<li>
+					<a href="#">Прайс-лист</a>
+				</li>
+				<li>
+					<a href="#">Акции</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+			<div class="header-right">
+				<a href="tel:8 (999) 990 - 90 -90" class="header-right-phone">8 (999) 990 - 90 -90</a>
+				<a data-options='{"touch" : false}' data-fancybox data-src="#backcall-modal" href="javascript:;" class="header-right-backcall">заявка на обратный звонок</a>
+			</div>
+		</div>
+	</header>
+
+	<section id="breadcrumbs">
+		<div class="wrp">
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<span>Вакансии</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="vacancy">
+		<div class="wrp">
+			<h1 class="header-sec">вакансии</h1>
+			<div class="vacancy">
+				<div class="vacancy-item active">
+					<div class="vacancy-item-top">
+						<p class="name">Монтажник</p>
+						<p class="price">
+							З/п в месяц:
+							<span>100 000 руб</span>
+						</p>
+						<img src="img/breadcrumbs-blue-icon.svg" alt="faq-toggle">
+					</div>
+					<div class="vacancy-item-content">
+						<div class="block">
+							<p>Обязанности:</p>
+							<ul>
+								<li>сборка и установка оборудования по проекту;</li>
+								<li>земляные работы при необходимости</li>
+							</ul>
+						</div>
+						<div class="block">
+							<p>Требования:</p>
+							<ul>
+								<li>желание работать и зарабатывать</li>
+								<li>знания в электромонтажных, сантехнических и общестроительных работах (желательно);</li>
+								<li>наличие прав категории “B” и личного а/м будут преимуществом;</li>
+								<li>обучение, опыт работы не обязателен (но также является преимуществом).</li>
+							</ul>
+						</div>
+						<div class="block">
+							<p>Условия:</p>
+							<ul>
+								<li>сдельная оплата (средний заработок 120 000 ₽). Работа сезонная, но есть возможность максимально его продлить за счет обслуживания готовых систем;</li>
+								<li>инструмент и спец. техника;</li>
+								<li>компенсация топлива и доплата за личный а/м.</li>
+							</ul>
+						</div>
+						<p class="price">
+							З/п в месяц:
+							<span>100 000 руб</span>
+						</p>
+						<a data-options='{"touch" : false}' data-fancybox data-src="#vacancy-modal" href="javascript:;" class="black-button">
+							<span>отправить резюме<img src="img/file-icon.svg" alt="file"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="consult">
+		<div class="wrp">
+			<h2 class="header-sec">
+				нужна<br>
+				консультация?
+			</h2>
+			<p>
+				Оставьте свои контакнты данные, наш специалист перезвонит<br>
+				вам в ближайшее время и ответит на все вопросы
+			</p>
+			<form class="consult-form">
+				<input type="text" class="input" name="Имя" placeholder="Ваше имя">
+				<input type="tel" class="input user_phone" name="Телефон" placeholder="Ваш телефон">
+				<label class="form-checkbox">
+					<input type="checkbox" value="Да" name="Даю согласие на обработку персональных данных и принимаю политику конфидициальности" checked>
+					<span>Даю согласие на обработку персональных данных и принимаю политику конфидициальности</span>
+				</label>
+				<input type="submit" class="black-button" value="Отправить">
+			</form>
+		</div>
+		<img src="img/consult-img.png" alt="consult-img">
+	</section>
+
+	<footer id="footer">
+		<div class="wrp">
+			<div class="footer-top">
+				<a href="/" class="footer-logo">
+					<img src="img/logo.svg" alt="logo">
+					<span>Профессиональные системы<br> автоматического полива</span>
+				</a>
+				<ul class="footer-menu">
+					<li>
+						<a href="#">О компании</a>
+						<ul>
+							<li>
+								<a href="#">Вакансии</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Услуги</a>
+					</li>
+					<li>
+						<a href="#">Портфолио</a>
+					</li>
+					<li>
+						<a href="#">Прайс-лист</a>
+					</li>
+					<li>
+						<a href="#">Акции</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="footer-top-right">
+					<a href="tel:8 (999) 990 - 90 -90" class="footer-phone">8 (999) 990 - 90 -90</a>
+					<a data-options='{"touch" : false}' data-fancybox data-src="#backcall-modal" href="javascript:;" class="black-button">заявка на звонок</a>
+				</div>
+			</div>
+			<div class="footer-center">
+				<p class="footer-copyright">
+					Все права защищены,<br>
+					2024 ©
+				</p>
+				<div class="footer-center-item">
+					<p>Адрес</p>
+					<p>
+						г. Москва, ул. Очень длинная,<br>
+						д. 20, к. 1
+					</p>
+				</div>
+				<div class="footer-center-item">
+					<p>График работы</p>
+					<p>
+						с 10 до 21, без выходных
+					</p>
+				</div>
+				<div class="footer-center-item">
+					<p>E-mail</p>
+					<a href="mailto:auto-poliv@info.ru">auto-poliv@info.ru</a>
+				</div>
+				<div class="footer-center-item">
+					<p>Мессенджеры:</p>
+					<div class="footer-socials">
+						<a href="#">
+							<img src="img/telegram-black-icon.svg" alt="telegram">
+						</a>
+						<a href="#">
+							<img src="img/whatsapp-black-icon.svg" alt="whatsapp">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<a href="#">Карта сайта</a>
+				<a href="#">Обработка персональных данных</a>
+				<p>Разработано в <a href="https://internet-team.ru/" target="_blank">Internet Team</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/all.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Poliv Msk - Карточка услуги
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+	<div class="modal backcall-modal" style="display: none;" id="backcall-modal">
+		<div class="backcall-modal-wrp">
+			<p class="backcall-modal-h">Заказать звонок</p>
+			<p>
+				Оставьте свои контакнты данные, наш специалист перезвонит вам
+			</p>
+			<form class="backcall-modal-form consult-form">
+				<input type="text" class="input" name="Имя" placeholder="Ваше имя">
+				<input type="tel" class="input user_phone" name="Телефон" placeholder="Ваш телефон">
+				<label class="form-checkbox">
+					<input type="checkbox" value="Да" name="Даю согласие на обработку персональных данных и принимаю политику конфидициальности" checked>
+					<span>Даю согласие на обработку персональных данных и принимаю политику конфидициальности</span>
+				</label>
+				<input type="submit" class="black-button" value="Отправить">
+			</form>
+		</div>
+	</div>
+
+	<div class="modal backcall-modal" style="display: none;" id="backcall-thanks-modal">
+		<div class="backcall-modal-thanks backcall-modal-wrp">
+			<div>
+				<p class="backcall-modal-h">СПАСИБО!</p>
+				<p>
+					Спасибо! Ваша заявка отправлена.
+					Ожидайте звонка в ближайшее время.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal backcall-modal full-modal" style="display: none;" id="raschet-modal">
+		<div class="backcall-modal-wrp">
+			<p class="backcall-modal-h">рассчитать стоимость</p>
+			<p>
+				Оставьте свои контакнты данные и ожидайте рассчёта
+			</p>
+			<form class="backcall-modal-form consult-form">
+				<input type="text" class="input" name="Имя" placeholder="Ваше имя">
+				<input type="tel" class="input user_phone" name="Телефон" placeholder="Ваш телефон">
+				<textarea name="Комментарий" placeholder="Комментарий" class="input"></textarea>
+				<label class="form-file">
+					<input type="file" name="Файл">
+					<span>
+						<span class="icon"></span>
+						<span class="name">Прикрепите план вашего участка</span>
+					</span>
+				</label>
+				<label class="form-checkbox">
+					<input type="checkbox" value="Да" name="Даю согласие на обработку персональных данных и принимаю политику конфидициальности" checked>
+					<span>Даю согласие на обработку персональных данных и принимаю политику конфидициальности</span>
+				</label>
+				<input type="submit" class="black-button" value="Отправить">
+			</form>
+		</div>
+	</div>
+
+	<div class="modal backcall-modal" style="display: none;" id="raschet-thanks-modal">
+		<div class="backcall-modal-thanks backcall-modal-wrp">
+			<div>
+				<p class="backcall-modal-h">СПАСИБО!</p>
+				<p>
+					Спасибо! Ваша заявка отправлена.
+					Ожидайте звонка в ближайшее время.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<header id="header">
+		<div class="wrp">
+			<a href="/" class="header-logo">
+				<img src="img/logo.svg" alt="logo">
+			</a>
+			<p class="header-logo-text">
+				Профессиональные<br>
+				системы автоматического<br>
+				полива
+			</p>
+			<input id="header-menu__toggle" type="radio" style="display: none;" />
+			<label class="header-menu__btn" for="header-menu__toggle">
+				<div>
+					<span></span>
+				</div>
+			</label>
+			<ul class="header-menu">
+				<li class="sub-li">
+					<a href="#">О компании</a>
+					<ul>
+						<li>
+							<a href="#">Вакансии</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Услуги</a>
+				</li>
+				<li>
+					<a href="#">Портфолио</a>
+				</li>
+				<li>
+					<a href="#">Прайс-лист</a>
+				</li>
+				<li>
+					<a href="#">Акции</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+			<div class="header-right">
+				<a href="tel:8 (999) 990 - 90 -90" class="header-right-phone">8 (999) 990 - 90 -90</a>
+				<a data-options='{"touch" : false}' data-fancybox data-src="#backcall-modal" href="javascript:;" class="header-right-backcall">заявка на обратный звонок</a>
+			</div>
+		</div>
+	</header>
+
+	<section id="breadcrumbs">
+		<div class="wrp">
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<a href="#">Каталог услуг</a>
+				</li>
+				<li>
+					<span>Проектирование</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="usl-in">
+		<div class="usl-in-banner" style="background: url(img/usl-img1.png) no-repeat center center / cover;">
+			<div class="wrp">
+				<h1>проектирование</h1>
+				<a data-options='{"touch" : false}' data-fancybox data-src="#raschet-modal" href="javascript:;" class="blue-button">рассчитать стоимость</a>
+			</div>
+		</div>
+		<div class="wrp">
+			<div class="usl-in-text">
+				<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+				Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+				<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+				Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+				<ul>
+					<li>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</li>
+					<li>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="oborud">
+		<div class="wrp">
+			<div class="usl-top">
+				<h2 class="header-sec">оборудование</h2>
+				<div class="oborud-slider-nav">
+					<div class="prev">
+						<svg width="57" height="8" viewBox="0 0 57 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.646446 4.35356C0.451183 4.1583 0.451183 3.84171 0.646446 3.64645L3.82843 0.464471C4.02369 0.269209 4.34027 0.269209 4.53553 0.464471C4.7308 0.659733 4.7308 0.976315 4.53553 1.17158L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34028 4.53553 7.53554C4.34027 7.7308 4.02369 7.7308 3.82843 7.53554L0.646446 4.35356ZM57 4.5L1 4.5L1 3.5L57 3.5L57 4.5Z" fill="black"/>
+						</svg>
+					</div>
+					<div class="next">
+						<svg width="57" height="8" viewBox="0 0 57 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M56.3536 4.35356C56.5488 4.1583 56.5488 3.84171 56.3536 3.64645L53.1716 0.464471C52.9763 0.269209 52.6597 0.269209 52.4645 0.464471C52.2692 0.659733 52.2692 0.976315 52.4645 1.17158L55.2929 4L52.4645 6.82843C52.2692 7.02369 52.2692 7.34028 52.4645 7.53554C52.6597 7.7308 52.9763 7.7308 53.1716 7.53554L56.3536 4.35356ZM-4.37114e-08 4.5L56 4.5L56 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="black"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="oborud-slider swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="oborud-slider-item">
+							<div class="logo">
+								<img src="img/oborud-logo1.svg" alt="logo">
+							</div>
+							<p>
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="oborud-slider-item">
+							<div class="logo">
+								<img src="img/oborud-logo2.svg" alt="logo">
+							</div>
+							<p>
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="oborud-slider-item">
+							<div class="logo">
+								<img src="img/oborud-logo3.svg" alt="logo">
+							</div>
+							<p>
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="oborud-slider-item">
+							<div class="logo">
+								<img src="img/oborud-logo1.svg" alt="logo">
+							</div>
+							<p>
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="reviews">
+		<div class="wrp">
+			<div class="usl-top">
+				<h2 class="header-sec">отзывы</h2>
+				<p>
+					Наша компания оказывается различные услуги полного<br>
+					спектра для установки систем атополива под ключ
+				</p>
+				<div class="reviews-slider-nav">
+					<div class="prev">
+						<svg width="57" height="8" viewBox="0 0 57 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.646446 4.35356C0.451183 4.1583 0.451183 3.84171 0.646446 3.64645L3.82843 0.464471C4.02369 0.269209 4.34027 0.269209 4.53553 0.464471C4.7308 0.659733 4.7308 0.976315 4.53553 1.17158L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34028 4.53553 7.53554C4.34027 7.7308 4.02369 7.7308 3.82843 7.53554L0.646446 4.35356ZM57 4.5L1 4.5L1 3.5L57 3.5L57 4.5Z" fill="black"/>
+						</svg>
+					</div>
+					<div class="next">
+						<svg width="57" height="8" viewBox="0 0 57 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M56.3536 4.35356C56.5488 4.1583 56.5488 3.84171 56.3536 3.64645L53.1716 0.464471C52.9763 0.269209 52.6597 0.269209 52.4645 0.464471C52.2692 0.659733 52.2692 0.976315 52.4645 1.17158L55.2929 4L52.4645 6.82843C52.2692 7.02369 52.2692 7.34028 52.4645 7.53554C52.6597 7.7308 52.9763 7.7308 53.1716 7.53554L56.3536 4.35356ZM-4.37114e-08 4.5L56 4.5L56 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="black"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-slider swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="reviews-slider-item">
+							<a href="img/review-img.png" data-fancybox class="img">
+								<img src="img/review-img.png" alt="review-img">
+							</a>
+							<p class="date">
+								Дата:
+								<span>05.07.2023</span>
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider-item">
+							<a href="img/review-img.png" data-fancybox class="img">
+								<img src="img/review-img.png" alt="review-img">
+							</a>
+							<p class="date">
+								Дата:
+								<span>05.07.2023</span>
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider-item">
+							<a href="img/review-img.png" data-fancybox class="img">
+								<img src="img/review-img.png" alt="review-img">
+							</a>
+							<p class="date">
+								Дата:
+								<span>05.07.2023</span>
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider-item">
+							<a href="img/review-img.png" data-fancybox class="img">
+								<img src="img/review-img.png" alt="review-img">
+							</a>
+							<p class="date">
+								Дата:
+								<span>05.07.2023</span>
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider-item">
+							<a href="img/review-img.png" data-fancybox class="img">
+								<img src="img/review-img.png" alt="review-img">
+							</a>
+							<p class="date">
+								Дата:
+								<span>05.07.2023</span>
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider-item">
+							<a href="img/review-img.png" data-fancybox class="img">
+								<img src="img/review-img.png" alt="review-img">
+							</a>
+							<p class="date">
+								Дата:
+								<span>05.07.2023</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="usl-button">
+				<a href="#" class="black-button">смотреть все</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="faq">
+		<div class="wrp">
+			<h2 class="header-sec">вопрос-ответ</h2>
+			<div class="faq">
+				<div class="faq-item">
+					<div class="faq-item-button">
+						<p>очень длинный и важный вопрос от пользователя</p>
+						<img src="img/breadcrumbs-blue-icon.svg" alt="faq-toggle">
+					</div>
+					<div class="faq-item-content">
+						<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+						Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-item-button">
+						<p>очень длинный и важный вопрос от пользователя</p>
+						<img src="img/breadcrumbs-blue-icon.svg" alt="faq-toggle">
+					</div>
+					<div class="faq-item-content">
+						<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+						Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-item-button">
+						<p>очень длинный и важный вопрос от пользователя</p>
+						<img src="img/breadcrumbs-blue-icon.svg" alt="faq-toggle">
+					</div>
+					<div class="faq-item-content">
+						<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+						Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-item-button">
+						<p>очень длинный и важный вопрос от пользователя</p>
+						<img src="img/breadcrumbs-blue-icon.svg" alt="faq-toggle">
+					</div>
+					<div class="faq-item-content">
+						<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+						Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-item-button">
+						<p>очень длинный и важный вопрос от пользователя</p>
+						<img src="img/breadcrumbs-blue-icon.svg" alt="faq-toggle">
+					</div>
+					<div class="faq-item-content">
+						<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+						Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="projects">
+		<div class="wrp">
+			<div class="usl-top">
+				<h2 class="header-sec">выполненные проекты</h2>
+				<div class="projects-slider-nav">
+					<div class="prev">
+						<svg width="57" height="8" viewBox="0 0 57 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.646446 4.35356C0.451183 4.1583 0.451183 3.84171 0.646446 3.64645L3.82843 0.464471C4.02369 0.269209 4.34027 0.269209 4.53553 0.464471C4.7308 0.659733 4.7308 0.976315 4.53553 1.17158L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34028 4.53553 7.53554C4.34027 7.7308 4.02369 7.7308 3.82843 7.53554L0.646446 4.35356ZM57 4.5L1 4.5L1 3.5L57 3.5L57 4.5Z" fill="black"/>
+						</svg>
+					</div>
+					<div class="next">
+						<svg width="57" height="8" viewBox="0 0 57 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M56.3536 4.35356C56.5488 4.1583 56.5488 3.84171 56.3536 3.64645L53.1716 0.464471C52.9763 0.269209 52.6597 0.269209 52.4645 0.464471C52.2692 0.659733 52.2692 0.976315 52.4645 1.17158L55.2929 4L52.4645 6.82843C52.2692 7.02369 52.2692 7.34028 52.4645 7.53554C52.6597 7.7308 52.9763 7.7308 53.1716 7.53554L56.3536 4.35356ZM-4.37114e-08 4.5L56 4.5L56 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="black"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="projects-slider swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="projects-slider-item">
+							<div class="img">
+								<img src="img/project-img1.png" alt="project">
+								<a href="#">подробнее<span></span></a>
+							</div>
+							<div class="info">
+								<p class="info-name">
+									Название<br> проекта
+								</p>
+								<p class="info-text">
+									Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+								</p>
+								<div class="info-items">
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/size-icon.svg" alt="size">
+										</span>
+										<p>Площадь: <span>20 соток</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/date-icon.svg" alt="date">
+										</span>
+										<p>Срок: <span>14 рабочих дней</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/price-icon.svg" alt="price">
+										</span>
+										<p>Стоимость: <span>60 000 руб</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="projects-slider-item">
+							<div class="img">
+								<img src="img/project-img2.png" alt="project">
+								<a href="#">подробнее<span></span></a>
+							</div>
+							<div class="info">
+								<p class="info-name">
+									Название<br> проекта
+								</p>
+								<p class="info-text">
+									Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+								</p>
+								<div class="info-items">
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/size-icon.svg" alt="size">
+										</span>
+										<p>Площадь: <span>20 соток</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/date-icon.svg" alt="date">
+										</span>
+										<p>Срок: <span>14 рабочих дней</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/price-icon.svg" alt="price">
+										</span>
+										<p>Стоимость: <span>60 000 руб</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="projects-slider-item">
+							<div class="img">
+								<img src="img/project-img1.png" alt="project">
+								<a href="#">подробнее<span></span></a>
+							</div>
+							<div class="info">
+								<p class="info-name">
+									Название<br> проекта
+								</p>
+								<p class="info-text">
+									Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+								</p>
+								<div class="info-items">
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/size-icon.svg" alt="size">
+										</span>
+										<p>Площадь: <span>20 соток</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/date-icon.svg" alt="date">
+										</span>
+										<p>Срок: <span>14 рабочих дней</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/price-icon.svg" alt="price">
+										</span>
+										<p>Стоимость: <span>60 000 руб</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="projects-slider-item">
+							<div class="img">
+								<img src="img/project-img2.png" alt="project">
+								<a href="#">подробнее<span></span></a>
+							</div>
+							<div class="info">
+								<p class="info-name">
+									Название<br> проекта
+								</p>
+								<p class="info-text">
+									Тут будет какое-то небольшое описание, о выполненном проекте, которое займет две строки
+								</p>
+								<div class="info-items">
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/size-icon.svg" alt="size">
+										</span>
+										<p>Площадь: <span>20 соток</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/date-icon.svg" alt="date">
+										</span>
+										<p>Срок: <span>14 рабочих дней</span></p>
+									</div>
+									<div class="info-item">
+										<span class="info-item-icon">
+											<img src="img/price-icon.svg" alt="price">
+										</span>
+										<p>Стоимость: <span>60 000 руб</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="usl-button">
+				<a href="#" class="black-button">смотреть все</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="consult">
+		<div class="wrp">
+			<h2 class="header-sec">
+				нужна<br>
+				консультация?
+			</h2>
+			<p>
+				Оставьте свои контакнты данные, наш специалист перезвонит<br>
+				вам в ближайшее время и ответит на все вопросы
+			</p>
+			<form class="consult-form">
+				<input type="text" class="input" name="Имя" placeholder="Ваше имя">
+				<input type="tel" class="input user_phone" name="Телефон" placeholder="Ваш телефон">
+				<label class="form-checkbox">
+					<input type="checkbox" value="Да" name="Даю согласие на обработку персональных данных и принимаю политику конфидициальности" checked>
+					<span>Даю согласие на обработку персональных данных и принимаю политику конфидициальности</span>
+				</label>
+				<input type="submit" class="black-button" value="Отправить">
+			</form>
+		</div>
+		<img src="img/consult-img.png" alt="consult-img">
+	</section>
+
+	<footer id="footer">
+		<div class="wrp">
+			<div class="footer-top">
+				<a href="/" class="footer-logo">
+					<img src="img/logo.svg" alt="logo">
+					<span>Профессиональные системы<br> автоматического полива</span>
+				</a>
+				<ul class="footer-menu">
+					<li>
+						<a href="#">О компании</a>
+						<ul>
+							<li>
+								<a href="#">Вакансии</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Услуги</a>
+					</li>
+					<li>
+						<a href="#">Портфолио</a>
+					</li>
+					<li>
+						<a href="#">Прайс-лист</a>
+					</li>
+					<li>
+						<a href="#">Акции</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="footer-top-right">
+					<a href="tel:8 (999) 990 - 90 -90" class="footer-phone">8 (999) 990 - 90 -90</a>
+					<a data-options='{"touch" : false}' data-fancybox data-src="#backcall-modal" href="javascript:;" class="black-button">заявка на звонок</a>
+				</div>
+			</div>
+			<div class="footer-center">
+				<p class="footer-copyright">
+					Все права защищены,<br>
+					2024 ©
+				</p>
+				<div class="footer-center-item">
+					<p>Адрес</p>
+					<p>
+						г. Москва, ул. Очень длинная,<br>
+						д. 20, к. 1
+					</p>
+				</div>
+				<div class="footer-center-item">
+					<p>График работы</p>
+					<p>
+						с 10 до 21, без выходных
+					</p>
+				</div>
+				<div class="footer-center-item">
+					<p>E-mail</p>
+					<a href="mailto:auto-poliv@info.ru">auto-poliv@info.ru</a>
+				</div>
+				<div class="footer-center-item">
+					<p>Мессенджеры:</p>
+					<div class="footer-socials">
+						<a href="#">
+							<img src="img/telegram-black-icon.svg" alt="telegram">
+						</a>
+						<a href="#">
+							<img src="img/whatsapp-black-icon.svg" alt="whatsapp">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<a href="#">Карта сайта</a>
+				<a href="#">Обработка персональных данных</a>
+				<p>Разработано в <a href="https://internet-team.ru/" target="_blank">Internet Team</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/all.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
